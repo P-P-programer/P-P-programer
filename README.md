@@ -6,6 +6,14 @@ Desarrollador web con enfoque en Laravel, PHP y backend. Me gusta construir sist
 
 ---
 
+### 🌐 Portafolio
+
+👉 [Ver mi portafolio](https://P-P-programer.github.io) — Proyectos, tesis y habilidades en un solo lugar.
+
+![Portafolio](https://img.shields.io/badge/Portafolio-Ver%20en%20GitHub%20Pages-00bfff?style=for-the-badge&logo=github)
+
+---
+
 ### 🛠️ Tecnologías que uso:
 ![Laravel](https://img.shields.io/badge/Laravel-FF2D24?style=for-the-badge&logo=laravel&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
@@ -17,6 +25,9 @@ Desarrollador web con enfoque en Laravel, PHP y backend. Me gusta construir sist
 ---
 
 ### 🚀 Proyectos destacados:
+
+- **[S.U.N. Sistema Universal de Notas](https://github.com/P-P-programer/Sistema-Universal-de-Notas-S.U.N)**  
+  *Tesis universitaria* — Sistema para colegios con gestión de notas, matrículas y asistencias. 35+ tablas, 68% Blade, auditoría, roles y gráficas. Desarrollado con Laravel, Vite, Node.js y MySQL.
 
 - **[Your-Face-IA](https://your-face-ia.site/)**  
   Software de reconocimiento facial con IA para ESP32. Usa Laravel, Node.js, AJAX y CI/CD con GitHub Actions. Incluye autenticación segura, auditoría y PWA. En producción.
@@ -52,6 +63,15 @@ Desarrollador web con enfoque en Laravel, PHP y backend. Me gusta construir sist
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=P-P-programer&layout=compact&theme=dark)
 
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=P-P-programer&theme=dark&hide_border=false)
+
 ---
 
 > *“Aprendo con prueba y error, y con IA como guía. Me gusta construir, no solo escribir código.”*
+
+---
+
+### 🎯 Actualmente buscando oportunidades como:
+- **Backend Developer (Laravel/PHP)**
+- **Full Stack Developer (con enfoque en backend)**
+- **Junior Developer en entornos con CI/CD y buenas prácticas**
