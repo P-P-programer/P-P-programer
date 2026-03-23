@@ -24,7 +24,7 @@ Desarrollador web enfocado en **Laravel** y **PHP**. Construyo sistemas escalabl
 - **EN:** Facial and gesture recognition platform for access control, built with ESP32 and Laravel backend. Features secure authentication, audit logs, and a PWA. Automates check-in/check-out, providing faster and safer access management. Personal project for learning IoT and scalable deployment; platform could be adapted to real-world needs.
 
 #### 🎓 [S.U.N. - Sistema Universal de Notas](https://github.com/P-P-programer/Sistema-Universal-de-Notas-S.U.N)
-**Sistema integral de gestión escolar / University Thesis**
+**Sistema Universal de Notas / University Thesis**
 - **ES:** Plataforma para notas, matrículas, asistencia y reportes con dashboards. Flujos automáticos redujeron hasta en un 70% el tiempo de gestión manual y facilitaron el seguimiento académico.
 - **EN:** School management platform for grades, enrollment, attendance, statistics. Automations reduced manual admin time by 70%, enabling easier institutional analytics.
 
@@ -58,7 +58,7 @@ Desarrollador web enfocado en **Laravel** y **PHP**. Construyo sistemas escalabl
 ### 📬 Contact / Contacto
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/andr%C3%A9s-felipe-mendoza-palma-957564376) 
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:Felipemendoza3247@gmail.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mendoza.felipe.dev@gmail.com)
 
 ---
 
