@@ -32,7 +32,7 @@ Desarrollador web enfocado en **Laravel** y **PHP**. Construyo sistemas escalabl
 
 | Stats | Racha de commits | Lenguajes |
 |:---:|:---:|:---:|
-| ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=P-P-programer&show_icons=true&theme=dark&count_private=true&hide_border=true&include_all_commits=true) | ![GitHub Streak](https://streak-stats.demolab.com?user=P-P-programer&theme=dark&hide_border=true&date_format=j%20M%5B%20Y%5D) | ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=P-P-programer&layout=compact&theme=dark&hide_border=true) |
+| ![GitHub Stats](https://p-p-programer-stats.vercel.app/api/stats) | ![GitHub Streak](https://p-p-programer-stats.vercel.app/api/streak) | ![Top Langs](https://p-p-programer-stats.vercel.app/api/languages) |
 
 ---
 
