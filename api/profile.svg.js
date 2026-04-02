@@ -42,7 +42,6 @@ export default async function handler(req, res) {
     const publicGists = user.public_gists ?? 0;
     const bio = user.bio || "Backend Developer | Laravel | PHP";
 
-    // Top languages reales: sumando languages_url de cada repo
     const languageTotals = {};
     for (const repo of repos) {
       if (repo.fork || !repo.languages_url) continue;
@@ -62,11 +61,28 @@ export default async function handler(req, res) {
       .slice(0, 3);
 
     const totalBytes = topLangs.reduce((acc, [, bytes]) => acc + bytes, 0) || 1;
-    const langText = topLangs.length
+
+    const colors = ["#38bdf8", "#8b5cf6", "#22c55e"];
+
+    const langRows = topLangs.length
       ? topLangs
-          .map(([lang, bytes]) => `${lang} ${((bytes / totalBytes) * 100).toFixed(0)}%`)
-          .join("  •  ")
-      : "No languages found";
+          .map(([lang, bytes], i) => {
+            const pct = (bytes / totalBytes) * 100;
+            const barWidth = Math.max(24, pct * 2.0);
+            const y = 165 + i * 34;
+            const color = colors[i % colors.length];
+
+            return `
+              <text x="760" y="${y}" fill="#e2e8f0" font-size="14" font-family="Segoe UI, Inter, Arial, sans-serif">${lang}</text>
+              <rect x="845" y="${y - 12}" width="108" height="12" rx="6" fill="rgba(255,255,255,0.08)"/>
+              <rect x="845" y="${y - 12}" width="${Math.min(108, barWidth)}" height="12" rx="6" fill="${color}"/>
+              <text x="962" y="${y}" text-anchor="end" fill="#cbd5e1" font-size="13" font-family="Segoe UI, Inter, Arial, sans-serif">${pct.toFixed(0)}%</text>
+            `;
+          })
+          .join("")
+      : `
+        <text x="760" y="182" fill="#94a3b8" font-size="14" font-family="Segoe UI, Inter, Arial, sans-serif">No languages found</text>
+      `;
 
     const updatedAt = new Date().toLocaleDateString("es-ES", {
       day: "2-digit",
@@ -85,7 +101,7 @@ export default async function handler(req, res) {
             <stop stop-color="#38bdf8"/>
             <stop offset="1" stop-color="#8b5cf6"/>
           </linearGradient>
-          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+          <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
             <feGaussianBlur stdDeviation="10" result="blur"/>
             <feColorMatrix in="blur" type="matrix"
               values="0 0 0 0 0.22
@@ -99,14 +115,14 @@ export default async function handler(req, res) {
         <rect x="18" y="18" width="944" height="284" rx="22" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)"/>
         <rect x="18" y="18" width="944" height="7" rx="3.5" fill="url(#accent)"/>
 
-        <circle cx="112" cy="110" r="54" fill="url(#accent)" filter="url(#shadow)"/>
+        <circle cx="112" cy="110" r="54" fill="url(#accent)" filter="url(#glow)"/>
         <text x="112" y="118" text-anchor="middle" fill="#ffffff" font-size="28" font-family="Segoe UI, Inter, Arial, sans-serif" font-weight="700">${name.slice(0,1)}</text>
 
         <text x="190" y="78" fill="#ffffff" font-size="30" font-family="Segoe UI, Inter, Arial, sans-serif" font-weight="700">${name}</text>
         <text x="190" y="108" fill="#cbd5e1" font-size="16" font-family="Segoe UI, Inter, Arial, sans-serif">${bio}</text>
         <text x="190" y="134" fill="#94a3b8" font-size="13" font-family="Segoe UI, Inter, Arial, sans-serif">Focused on clean backend development, Laravel, PHP and real-world solutions.</text>
 
-        <rect x="190" y="160" width="560" height="1" fill="rgba(255,255,255,0.08)"/>
+        <rect x="190" y="160" width="540" height="1" fill="rgba(255,255,255,0.08)"/>
 
         <text x="190" y="196" fill="#e2e8f0" font-size="15" font-family="Segoe UI, Inter, Arial, sans-serif">Followers</text>
         <text x="190" y="226" fill="#38bdf8" font-size="30" font-family="Segoe UI, Inter, Arial, sans-serif" font-weight="700">${followers}</text>
@@ -120,18 +136,10 @@ export default async function handler(req, res) {
         <text x="590" y="196" fill="#e2e8f0" font-size="15" font-family="Segoe UI, Inter, Arial, sans-serif">Gists</text>
         <text x="590" y="226" fill="#f59e0b" font-size="30" font-family="Segoe UI, Inter, Arial, sans-serif" font-weight="700">${publicGists}</text>
 
-        <text x="760" y="84" fill="#ffffff" font-size="18" font-family="Segoe UI, Inter, Arial, sans-serif" font-weight="700">Top Languages</text>
-        <text x="760" y="112" fill="#cbd5e1" font-size="13" font-family="Segoe UI, Inter, Arial, sans-serif">${langText}</text>
+        <text x="760" y="78" fill="#ffffff" font-size="18" font-family="Segoe UI, Inter, Arial, sans-serif" font-weight="700">Top Languages</text>
+        <text x="760" y="104" fill="#94a3b8" font-size="13" font-family="Segoe UI, Inter, Arial, sans-serif">Language • progress • share</text>
 
-        <rect x="760" y="132" width="182" height="110" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
-        ${topLangs.map(([, bytes], i) => {
-          const colors = ["#38bdf8", "#8b5cf6", "#22c55e"];
-          const pct = ((bytes / totalBytes) * 100).toFixed(0);
-          const y = 160 + i * 26;
-          return `
-            <rect x="780" y="${y}" width="${Math.max(20, pct * 1.2)}" height="12" rx="6" fill="${colors[i % colors.length]}"/>
-          `;
-        }).join("")}
+        ${langRows}
 
         <text x="40" y="272" fill="#94a3b8" font-size="13" font-family="Segoe UI, Inter, Arial, sans-serif">Última actualización del perfil: ${updatedAt}</text>
         <text x="760" y="272" fill="#94a3b8" font-size="13" font-family="Segoe UI, Inter, Arial, sans-serif">Cache via Vercel: ${cacheSeconds}s</text>
