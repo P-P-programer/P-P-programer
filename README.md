@@ -30,8 +30,11 @@ Desarrollador web enfocado en **Laravel** y **PHP**. Construyo sistemas escalabl
 
 ### 📊 GitHub Stats
 
-| Perfil 
+| Perfil |
 ![GitHub Profile](https://p-p-programer.vercel.app/api/profile.svg)
+
+---
+
 ### 🚀 Featured Projects / Proyectos Destacados
 
 #### 🛡️ [Your-Face-IA](https://your-face-ia.site/) — *En producción / Live in production*
