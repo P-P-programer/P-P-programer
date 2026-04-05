@@ -30,7 +30,6 @@ Desarrollador web enfocado en **Laravel** y **PHP**. Construyo sistemas escalabl
 
 ### 📊 GitHub Stats
 
-| Perfil |
 ![GitHub Profile](https://p-p-programer.vercel.app/api/profile.svg)
 
 ---
