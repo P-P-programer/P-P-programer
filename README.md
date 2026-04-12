@@ -46,6 +46,14 @@ Desarrollador web enfocado en **Laravel** y **PHP**. Construyo sistemas escalabl
 
 ---
 
+#### 💧 [AquaSense](https://aquasense.sbs) — *En producción / Live in production*
+**Departmental Beta Project — Water Quality Detection System**
+
+- **ES:** Sistema departamental para la detección de pH e impurezas en agua tratada, diseñado para apoyar el monitoreo y análisis de calidad del agua mediante una interfaz web y lógica de procesamiento.
+- **EN:** Departmental system for detecting pH and impurities in treated water, designed to support water quality monitoring and analysis through a web interface and processing logic.
+
+`PHP` `JavaScript` `CSS` `Blade` `C++` `C`
+
 #### 🎓 [S.U.N. - Sistema Universal de Notas](https://github.com/P-P-programer/Sistema-Universal-de-Notas-S.U.N)
 **University Thesis — School Management Platform**
 
@@ -66,15 +74,6 @@ Desarrollador web enfocado en **Laravel** y **PHP**. Construyo sistemas escalabl
 
 ---
 
-#### 🥊 [BoxeoEducativo](https://github.com/P-P-programer/BoxeoEducativo)
-**Java MVC Learning Project**
-
-- **ES:** Aplicación Java con estructura MVC para fortalecer habilidades en POO y desktop apps. Proyecto de aprendizaje, no para producción.
-- **EN:** Java MVC app to strengthen OOP and desktop development skills. Learning project, not for production.
-
-`Java` `MVC` `OOP` `Desktop`
-
----
 
 ### 🌐 Portafolio / Portfolio
 
